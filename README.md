@@ -4,7 +4,7 @@ This project demonstrates how to use Nessus to scan a website for vulnerabilitie
 # Project Structure
 - `docs/`: Contains additional documentation files.
 - `results/`: Contains the scan results and reports.
-- `nessus_scan_report.pdf`: Report of scan with findings and recommendations.
+- `webb_vuln_report.pdf`: Report of scan with findings and recommendations.
 - `README.md`: This file, provides an overview and instructions for the project.
 
 # Prerequisites
@@ -12,10 +12,10 @@ This project demonstrates how to use Nessus to scan a website for vulnerabilitie
 - Access to the target website for scanning.
 
 # Installation
-Follow the instructions in the [installation documentation](docs/installation.md) to set up Nessus and prepare your environment for scanning.
+Follow the instructions in the (docs/installation.md) to set up Nessus and prepare your environment for scanning.
 
 # Usage
-Detailed usage instructions are in the [usage documentation](docs/usage.md). Below is a summary:
+Detailed usage instructions are in the (docs/usage.md). Below is a summary:
 
 1. **Configure Nessus**:
    - Add the target website to Nessus.
