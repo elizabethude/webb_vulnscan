@@ -1,1 +1,483 @@
 
+  17Plugin ID,CVE,CVSS v2.0 Base Score,Risk,Host,Protocol,Port,Name,Synopsis,Description,Solution,See Also,Plugin Output,STIG Severity,CVSS v3.0 Base Score,Risk Factor,BID,XREF,MSKB,Metasploit,Core Impact,CANVAS
+"10107","","","None","www.***************","tcp","80","HTTP Server Type and Version","A web server is running on the remote host.","This plugin attempts to determine the type and the version of the
+  remote web server.","n/a","","The remote web server type is :
+
+Apache","","","None","","IAVT:0001-T-0931","","","",""
+"10107","","","None","www.***************","tcp","443","HTTP Server Type and Version","A web server is running on the remote host.","This plugin attempts to determine the type and the version of the
+  remote web server.","n/a","","The remote web server type is :
+
+Apache","","","None","","IAVT:0001-T-0931","","","",""
+"10386","","","None","www.***************","tcp","80","Web Server No 404 Error Code Check","The remote web server does not return 404 error codes.","The remote web server is configured such that it does not return '404
+Not Found' error codes when a nonexistent file is requested, perhaps
+returning instead a site map, search page or authentication page.
+
+Nessus has enabled some counter measures for this.  However, they
+might be insufficient.  If a great number of security holes are
+produced for this port, they might not all be accurate.","n/a","","
+
+CGI scanning will be disabled for this host because the host responds
+to requests for non-existent URLs with HTTP code 301
+rather than 404. The requested URL was : 
+
+    http://www.***************/mT9bs1VB5Bg1.html
+","","","None","","","","","",""
+"10662","","","None","www.***************","tcp","443","Web mirroring","Nessus can crawl the remote website.","This plugin makes a mirror of the remote website(s) and extracts the
+list of CGIs that are used by the remote host. 
+
+It is suggested that you change the number of pages to mirror in the
+'Options' section of the client.","n/a","","
+Webmirror performed 49 queries in 72s (0.0680 queries per second)
+
+The following CGIs have been discovered :
+
+
++ CGI : /send_form_email.php
+  Methods : POST
+  Argument : Enquiry
+  Argument : email
+  Argument : first_name
+  Argument : last_name
+  Argument : telephone
+
+
++ CGI : /send_repair_request_form.php
+  Methods : POST
+  Argument : Address
+  Argument : Repair
+  Argument : email
+  Argument : first_name
+  Argument : last_name
+  Argument : telephone
+","","","None","","","","","",""
+"11032","","","None","www.***************","tcp","80","Web Server Directory Enumeration","It is possible to enumerate directories on the web server.","This plugin attempts to determine the presence of various common
+directories on the remote web server.  By sending a request for a
+directory, the web server response code indicates if it is a valid
+directory or not.","n/a","http://projects.webappsec.org/w/page/13246953/Predictable%20Resource%20Location","
+The following directories were discovered:
+/icons
+
+While this is not, in and of itself, a bug, you should manually inspect 
+these directories to ensure that they are in compliance with company
+security standards
+","","","None","","OWASP:OWASP-CM-006","","","",""
+"11032","","","None","www.***************","tcp","443","Web Server Directory Enumeration","It is possible to enumerate directories on the web server.","This plugin attempts to determine the presence of various common
+directories on the remote web server.  By sending a request for a
+directory, the web server response code indicates if it is a valid
+directory or not.","n/a","http://projects.webappsec.org/w/page/13246953/Predictable%20Resource%20Location","
+The following directories were discovered:
+/css, /icons, /img, /js, /cgi-bin/sysinfo
+
+While this is not, in and of itself, a bug, you should manually inspect 
+these directories to ensure that they are in compliance with company
+security standards
+","","","None","","OWASP:OWASP-CM-006","","","",""
+"11219","","","None","www.***************","tcp","80","Nessus SYN scanner","It is possible to determine which TCP ports are open.","This plugin is a SYN 'half-open' port scanner.  It shall be reasonably
+quick even against a firewalled target. 
+
+Note that SYN scans are less intrusive than TCP (full connect) scans
+against broken services, but they might cause problems for less robust
+firewalls and also leave unclosed connections on the remote target, if
+the network is loaded.","Protect your target with an IP filter.","","Port 80/tcp was found to be open","","","None","","","","","",""
+"11219","","","None","www.***************","tcp","443","Nessus SYN scanner","It is possible to determine which TCP ports are open.","This plugin is a SYN 'half-open' port scanner.  It shall be reasonably
+quick even against a firewalled target. 
+
+Note that SYN scans are less intrusive than TCP (full connect) scans
+against broken services, but they might cause problems for less robust
+firewalls and also leave unclosed connections on the remote target, if
+the network is loaded.","Protect your target with an IP filter.","","Port 443/tcp was found to be open","","","None","","","","","",""
+"19506","","","None","www.***************","tcp","0","Nessus Scan Information","This plugin displays information about the Nessus scan.","This plugin displays, for each tested host, information about the
+scan itself :
+
+  - The version of the plugin set.
+  - The type of scanner (Nessus or Nessus Home).
+  - The version of the Nessus Engine.
+  - The port scanner(s) used.
+  - The port range scanned.
+  - The ping round trip time 
+  - Whether credentialed or third-party patch management
+    checks are possible.
+  - Whether the display of superseded patches is enabled
+  - The date of the scan.
+  - The duration of the scan.
+  - The number of hosts scanned in parallel.
+  - The number of checks done in parallel.","n/a","","Information about this scan : 
+
+Nessus version : 10.7.3
+Nessus build : 20038
+Plugin feed version : 202406041208
+Scanner edition used : Nessus Home
+Scanner OS : WINDOWS
+Scanner distribution : win-x86-64
+Scan type : Normal
+Scan name : *************** vuln scan
+Scan policy used : Web Application Tests
+Scanner IP : 100.74.161.58
+Port scanner(s) : nessus_syn_scanner 
+Port range : 1-65535
+Ping RTT : 41.148 ms
+Thorough tests : no
+Experimental tests : no
+Plugin debugging enabled : no
+Paranoia level : 1
+Report verbosity : 1
+Safe checks : yes
+Optimize the test : no
+Credentialed checks : no
+Patch management checks : None
+Display superseded patches : yes (supersedence plugin did not launch)
+CGI scanning : enabled
+Web application tests : enabled
+Web app tests -  Test mode : single
+Web app tests -  Try all HTTP methods : no
+Web app tests -  Maximum run time : 5 minutes.
+Web app tests -  Stop at first flaw : CGI
+Max hosts : 30
+Max checks : 4
+Recv timeout : 5
+Backports : None
+Allow post-scan editing : Yes
+Nessus Plugin Signature Checking : Enabled
+Audit File Signature Checking : Disabled
+Scan Start Date : 2024/6/14 23:16 GMT Standard Time
+Scan duration : 32932 sec
+Scan for malware : no
+","","","None","","","","","",""
+"43111","","","None","www.***************","tcp","80","HTTP Methods Allowed (per directory)","This plugin determines which HTTP methods are allowed on various CGI
+directories.","By calling the OPTIONS method, it is possible to determine which HTTP
+methods are allowed on each directory.
+
+The following HTTP methods are considered insecure:
+  PUT, DELETE, CONNECT, TRACE, HEAD
+
+Many frameworks and languages treat 'HEAD' as a 'GET' request, albeit
+one without any body in the response. If a security constraint was
+set on 'GET' requests such that only 'authenticatedUsers' could
+access GET requests for a particular servlet or resource, it would be
+bypassed for the 'HEAD' version. This allowed unauthorized blind
+submission of any privileged GET request.
+
+As this list may be incomplete, the plugin also tests - if 'Thorough
+tests' are enabled or 'Enable web applications tests' is set to 'yes'
+in the scan policy - various known HTTP methods on each directory and
+considers them as unsupported if it receives a response code of 400,
+403, 405, or 501.
+
+Note that the plugin output is only informational and does not
+necessarily indicate the presence of any security vulnerabilities.","n/a","http://www.nessus.org/u?d9c03a9a
+http://www.nessus.org/u?b019cbdb
+https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)","Based on the response to an OPTIONS request :
+
+  - HTTP methods GET HEAD OPTIONS POST are allowed on : 
+
+    /icons
+
+
+Based on tests of each method : 
+
+  - HTTP methods ACL BASELINE-CONTROL BCOPY BDELETE BMOVE BPROPFIND 
+    BPROPPATCH CHECKIN CHECKOUT COPY DEBUG DELETE GET HEAD INDEX 
+    LABEL LOCK MERGE MKACTIVITY MKCOL MKWORKSPACE MOVE NOTIFY OPTIONS 
+    ORDERPATCH PATCH POLL POST PROPFIND PROPPATCH PUT REPORT 
+    RPC_IN_DATA RPC_OUT_DATA SEARCH SUBSCRIBE UNCHECKOUT UNLOCK 
+    UNSUBSCRIBE UPDATE VERSION-CONTROL X-MS-ENUMATTS are allowed on : 
+
+    /
+
+  - HTTP methods GET HEAD OPTIONS POST are allowed on : 
+
+    /icons
+
+  - Invalid/unknown HTTP methods are allowed on :
+
+    /
+","","","None","","","","","",""
+"43111","","","None","www.***************","tcp","443","HTTP Methods Allowed (per directory)","This plugin determines which HTTP methods are allowed on various CGI
+directories.","By calling the OPTIONS method, it is possible to determine which HTTP
+methods are allowed on each directory.
+
+The following HTTP methods are considered insecure:
+  PUT, DELETE, CONNECT, TRACE, HEAD
+
+Many frameworks and languages treat 'HEAD' as a 'GET' request, albeit
+one without any body in the response. If a security constraint was
+set on 'GET' requests such that only 'authenticatedUsers' could
+access GET requests for a particular servlet or resource, it would be
+bypassed for the 'HEAD' version. This allowed unauthorized blind
+submission of any privileged GET request. 
+
+As this list may be incomplete, the plugin also tests - if 'Thorough
+tests' are enabled or 'Enable web applications tests' is set to 'yes'
+in the scan policy - various known HTTP methods on each directory and
+considers them as unsupported if it receives a response code of 400,
+403, 405, or 501.
+
+Note that the plugin output is only informational and does not
+necessarily indicate the presence of any security vulnerabilities.","n/a","http://www.nessus.org/u?d9c03a9a
+http://www.nessus.org/u?b019cbdb
+https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)","Based on the response to an OPTIONS request :
+
+  - HTTP methods GET HEAD OPTIONS POST are allowed on : 
+
+    /
+    /css
+    /icons
+    /img
+    /js
+    /owl-carousel
+
+
+Based on tests of each method : 
+
+  - HTTP methods ACL BASELINE-CONTROL BCOPY BDELETE BMOVE BPROPFIND 
+    BPROPPATCH CHECKIN CHECKOUT CONNECT COPY DEBUG DELETE GET HEAD 
+    are allowed on : 
+
+    /cgi-bin/sysinfo
+
+  - HTTP methods ACL BASELINE-CONTROL BCOPY BDELETE BMOVE BPROPFIND 
+    BPROPPATCH CHECKIN CHECKOUT CONNECT COPY DEBUG DELETE GET HEAD 
+    INDEX LABEL LOCK MERGE MKACTIVITY MKCOL MKWORKSPACE MOVE NOTIFY 
+    OPTIONS ORDERPATCH PATCH POLL POST PROPFIND PROPPATCH PUT REPORT 
+    RPC_IN_DATA RPC_OUT_DATA SEARCH SUBSCRIBE TRACE UNCHECKOUT UNLOCK 
+    UNSUBSCRIBE UPDATE VERSION-CONTROL X-MS-ENUMATTS are allowed on : 
+
+    /cgi-bin
+
+  - HTTP methods GET HEAD LOCK MERGE MKACTIVITY MKCOL MKWORKSPACE 
+    MOVE NOTIFY OPTIONS ORDERPATCH PATCH POLL POST PROPFIND PROPPATCH 
+    PUT REPORT RPC_IN_DATA RPC_OUT_DATA SEARCH SUBSCRIBE TRACE 
+    UNCHECKOUT UNLOCK UNSUBSCRIBE UPDATE VERSION-CONTROL 
+    X-MS-ENUMATTS are allowed on : 
+
+    /owl-carousel
+
+  - HTTP methods GET HEAD MOVE NOTIFY OPTIONS ORDERPATCH PATCH POLL 
+    POST PROPFIND PROPPATCH PUT REPORT RPC_IN_DATA RPC_OUT_DATA 
+    SEARCH SUBSCRIBE TRACE UNCHECKOUT UNLOCK UNSUBSCRIBE UPDATE 
+    VERSION-CONTROL X-MS-ENUMATTS are allowed on : 
+
+    /
+
+  - HTTP methods GET HEAD OPTIONS POST are allowed on : 
+
+    /css
+    /gbook
+    /icons
+    /img
+    /js
+
+  - Invalid/unknown HTTP methods are allowed on :
+
+    /
+    /cgi-bin
+    /owl-carousel
+","","","None","","","","","",""
+"48243","","","None","www.***************","tcp","443","PHP Version Detection","It was possible to obtain the version number of the remote PHP
+installation.","Nessus was able to determine the version of PHP available on the
+remote web server.","n/a","","
+Nessus was able to identify the following PHP version information :
+
+  Version : 8.0.30
+  Source  : X-Powered-By: PHP/8.0.30
+","","","None","","IAVT:0001-T-0936","","","",""
+"49704","","","None","www.***************","tcp","443","External URLs","Links to external sites were gathered.","Nessus gathered HREF links to external sites by crawling the remote
+web server.","n/a","","
+4 external URLs were gathered on this web server : 
+URL...                                  - Seen on...
+
+http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext - /
+http://www.reddragonitsolution.com      - /
+https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css - /
+https://www.gov.uk/coronavirus          - /
+
+","","","None","","","","","",""
+"50344","","","None","www.***************","tcp","443","Missing or Permissive Content-Security-Policy frame-ancestors HTTP Response Header","The remote web server does not take steps to mitigate a class of web
+application vulnerabilities.","The remote web server in some responses sets a permissive
+Content-Security-Policy (CSP) frame-ancestors response header or does
+not set one at all.
+
+The CSP frame-ancestors header has been proposed by the W3C Web
+Application Security Working Group as a way to mitigate cross-site
+scripting and clickjacking attacks.","Set a non-permissive Content-Security-Policy frame-ancestors header
+for all requested resources.","http://www.nessus.org/u?55aa8f57
+http://www.nessus.org/u?07cc2a06
+https://content-security-policy.com/
+https://www.w3.org/TR/CSP2/","
+The following pages do not set a Content-Security-Policy frame-ancestors response header or set a permissive policy:
+
+  - https://www.***************/
+  - https://www.***************/aboutus.html
+  - https://www.***************/allocations.html
+  - https://www.***************/committees.html
+  - https://www.***************/contactus.html
+  - https://www.***************/coronavirus.html
+  - https://www.***************/emergencycontact.html
+  - https://www.***************/finance.html
+  - https://www.***************/gbook/gbook.php
+  - https://www.***************/index.html
+  - https://www.***************/maintenance.html
+  - https://www.***************/membership.html
+  - https://www.***************/messageboard.html
+  - https://www.***************/repair-request.html
+  - https://www.***************/send_form_email.php
+  - https://www.***************/send_repair_request_form.php
+","","","None","","","","","",""
+"50345","","","None","www.***************","tcp","443","Missing or Permissive X-Frame-Options HTTP Response Header","The remote web server does not take steps to mitigate a class of web
+application vulnerabilities.","The remote web server in some responses sets a permissive
+X-Frame-Options response header or does not set one at all.
+
+The X-Frame-Options header has been proposed by Microsoft as a way to
+mitigate clickjacking attacks and is currently supported by all major
+browser vendors","Set a properly configured X-Frame-Options header for all requested
+resources.","https://en.wikipedia.org/wiki/Clickjacking
+http://www.nessus.org/u?399b1f56","
+The following pages do not set a X-Frame-Options response header or set a permissive policy:
+
+  - https://www.***************/
+  - https://www.***************/aboutus.html
+  - https://www.***************/allocations.html
+  - https://www.***************/committees.html
+  - https://www.***************/contactus.html
+  - https://www.***************/coronavirus.html
+  - https://www.***************/emergencycontact.html
+  - https://www.***************/finance.html
+  - https://www.***************/gbook/gbook.php
+  - https://www.***************/index.html
+  - https://www.***************/maintenance.html
+  - https://www.***************/membership.html
+  - https://www.***************/messageboard.html
+  - https://www.***************/repair-request.html
+  - https://www.***************/send_form_email.php
+  - https://www.***************/send_repair_request_form.php
+","","","None","","","","","",""
+"58987","","10.0","Critical","www.***************","tcp","443","PHP Unsupported Version Detection","The remote host contains an unsupported version of a web application
+scripting language.","According to its version, the installation of PHP on the remote host
+is no longer supported.
+
+Lack of support implies that no new security patches for the product
+will be released by the vendor. As a result, it is likely to contain
+security vulnerabilities.","Upgrade to a version of PHP that is currently supported.","http://php.net/eol.php
+https://wiki.php.net/rfc/releaseprocess","
+  Source              : X-Powered-By: PHP/8.0.30
+  Installed version   : 8.0.30
+  End of support date : 2023/11/26
+  Announcement        : http://php.net/supported-versions.php
+  Supported versions  : 8.1.x / 8.2.x / 8.3.x
+","","10.0","Critical","","IAVA:0001-A-0581","","","",""
+"84502","","","None","www.***************","tcp","443","HSTS Missing From HTTPS Server","The remote web server is not enforcing HSTS.","The remote HTTPS server is not enforcing HTTP Strict Transport Security (HSTS). 
+HSTS is an optional response header that can be configured on the server to instruct 
+the browser to only communicate via HTTPS. The lack of HSTS allows downgrade attacks,
+SSL-stripping man-in-the-middle attacks, and weakens cookie-hijacking protections.","Configure the remote web server to use HSTS.","https://tools.ietf.org/html/rfc6797","
+  The remote HTTPS server does not send the HTTP
+  ""Strict-Transport-Security"" header.
+","","","None","","","","","",""
+"85582","","4.3","Medium","www.***************","tcp","443","Web Application Potentially Vulnerable to Clickjacking","The remote web server may fail to mitigate a class of web application
+vulnerabilities.","The remote web server does not set an X-Frame-Options response header
+or a Content-Security-Policy 'frame-ancestors' response header in all
+content responses. This could potentially expose the site to a
+clickjacking or UI redress attack, in which an attacker can trick a
+user into clicking an area of the vulnerable page that is different
+than what the user perceives the page to be. This can result in a user
+performing fraudulent or malicious transactions.
+
+X-Frame-Options has been proposed by Microsoft as a way to mitigate
+clickjacking attacks and is currently supported by all major browser
+vendors.
+
+Content-Security-Policy (CSP) has been proposed by the W3C Web
+Application Security Working Group, with increasing support among
+all major browser vendors, as a way to mitigate clickjacking and other
+attacks. The 'frame-ancestors' policy directive restricts which
+sources can embed the protected resource.
+
+Note that while the X-Frame-Options and Content-Security-Policy
+response headers are not the only mitigations for clickjacking, they
+are currently the most reliable methods that can be detected through
+automation. Therefore, this plugin may produce false positives if
+other mitigation strategies (e.g., frame-busting JavaScript) are
+deployed or if the page does not perform any security-sensitive
+transactions.","Return the X-Frame-Options or Content-Security-Policy (with the
+'frame-ancestors' directive) HTTP header with the page's response.
+This prevents the page's content from being rendered by another site
+when using the frame or iframe HTML tags.","http://www.nessus.org/u?399b1f56
+https://www.owasp.org/index.php/Clickjacking_Defense_Cheat_Sheet
+https://en.wikipedia.org/wiki/Clickjacking","
+The following pages do not use a clickjacking mitigation response header and contain a clickable event :
+
+  - https://www.***************/contactus.html
+  - https://www.***************/repair-request.html
+","","","Medium","","CWE:693","","","",""
+"91815","","","None","www.***************","tcp","443","Web Application Sitemap","The remote web server hosts linkable content that can be crawled by
+Nessus.","The remote web server contains linkable content that can be used to
+gather information about a target.","n/a","http://www.nessus.org/u?5496c8d9","
+The following sitemap was created from crawling linkable content on the target host :
+
+  - https://www.***************/
+  - https://www.***************/aboutus.html
+  - https://www.***************/allocations.html
+  - https://www.***************/android-icon-192x192.png
+  - https://www.***************/apple-icon-114x114.png
+  - https://www.***************/apple-icon-120x120.png
+  - https://www.***************/apple-icon-144x144.png
+  - https://www.***************/apple-icon-152x152.png
+  - https://www.***************/apple-icon-180x180.png
+  - https://www.***************/apple-icon-57x57.png
+  - https://www.***************/apple-icon-60x60.png
+  - https://www.***************/apple-icon-72x72.png
+  - https://www.***************/apple-icon-76x76.png
+  - https://www.***************/committees.html
+  - https://www.***************/contactus.html
+  - https://www.***************/coronavirus.html
+  - https://www.***************/css/components.css
+  - https://www.***************/css/icons.css
+  - https://www.***************/css/responsee.css
+  - https://www.***************/emergencycontact.html
+  - https://www.***************/favicon-16x16.png
+  - https://www.***************/favicon-32x32.png
+  - https://www.***************/favicon-96x96.png
+  - https://www.***************/favicon.ico
+  - https://www.***************/finance.html
+  - https://www.***************/gbook/gbook.php
+  - https://www.***************/index.html
+  - https://www.***************/maintenance.html
+  - https://www.***************/membership.html
+  - https://www.***************/messageboard.html
+  - https://www.***************/owl-carousel/owl.carousel.css
+  - https://www.***************/owl-carousel/owl.theme.css
+  - https://www.***************/repair-request.html
+  - https://www.***************/send_form_email.php
+  - https://www.***************/send_repair_request_form.php
+
+Attached is a copy of the sitemap file.
+","","","None","","","","","",""
+"106658","","","None","www.***************","tcp","443","JQuery Detection","The web server on the remote host uses JQuery.","Nessus was able to detect JQuery on the remote host.","n/a","https://jquery.com/","
+  URL     : https://www.***************/js/jquery-1.8.3.min.js
+  Version : 1.8.3
+","","","None","","","","","",""
+"142960","","5.8","Medium","www.***************","tcp","443","HSTS Missing From HTTPS Server (RFC 6797)","The remote web server is not enforcing HSTS, as defined by RFC 6797.","The remote web server is not enforcing HSTS, as defined by RFC 6797. 
+HSTS is an optional response header that can be configured on the server to instruct 
+the browser to only communicate via HTTPS. The lack of HSTS allows downgrade attacks,
+SSL-stripping man-in-the-middle attacks, and weakens cookie-hijacking protections.","Configure the remote web server to use HSTS.","https://tools.ietf.org/html/rfc6797","
+HTTP/1.1 200 OK
+Date: Sat, 15 Jun 2024 00:01:40 GMT
+Server: Apache
+Last-Modified: Fri, 06 May 2022 11:14:17 GMT
+Vary: Accept-Encoding
+Content-Type: text/html
+X-Varnish: 765789857 741707499
+Age: 1
+Via: 1.1 webcache2 (Varnish/trunk)
+ETag: W/""37d3-5de55f5977ad6-gzip""
+Accept-Ranges: bytes
+Content-Length: 14291
+Connection: close
+
+
+The remote HTTPS server does not send the HTTP
+""Strict-Transport-Security"" header.
+","","6.5","Medium","","","","","",""
+"156439","","","None","www.***************","tcp","443","jQuery UI Detection","The web server on the remote host uses jQuery UI.","The web server on the remote host uses jQuery UI.","n/a","https://releases.jquery.com/ui/","
+  URL     : https://www.***************/js/jquery-ui.min.js
+  Version : 1.7.3
+","","","None","","","","","",""
