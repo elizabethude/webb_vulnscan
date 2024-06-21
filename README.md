@@ -25,7 +25,7 @@ Detailed usage instructions are in the (docs/usage.md). Below is a summary:
    - Start the scan from the Nessus interface.
 
 3. **Review the Results**:
-   - Once the scan is complete, download the report (e.g., `nessus_scan_report.pdf`) and review the findings.
-   - 
+   - Once the scan is complete, download the report (e.g., `scan_results`) and review the findings.
+     
 # License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
