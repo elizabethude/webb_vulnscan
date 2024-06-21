@@ -11,5 +11,5 @@
 - Export the report in your desired format (e.g., PDF).
 
 ## Example
-- An example scan report is provided in the `***` file.
+- The `results/scan_results` file provides an example scan report.
 
